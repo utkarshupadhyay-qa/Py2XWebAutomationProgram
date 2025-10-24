@@ -19,4 +19,3 @@ def test_cdnio_miniproject3():
 
     driver.maximize_window()
 
-    
