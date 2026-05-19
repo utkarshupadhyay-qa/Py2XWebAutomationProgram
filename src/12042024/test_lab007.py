@@ -10,7 +10,7 @@ def test_open_vwologin():
     driver = webdriver.Chrome()  # POST request | Create the Session
     driver.get("https://app.vwo.com")  # GET Request to URL param
     print(driver.title)
-    # print(driver.page_source)
+    # print(driver.page_source)  # entire html code wil be printed
     print(driver.session_id)
     driver.maximize_window()
     assert driver.title == "Login - VWO"

@@ -5,7 +5,7 @@ from selenium import webdriver
 # Selenium 4
 
 def test_open_vwologin():
-    driver = webdriver.Chrome() # Starts the Chrome Browser
+    driver = webdriver.Chrome() # Starts the Chrome Browser (Browser Session is created - POST request)
     driver.get("https://app.vwo.com")   # .get() ->Starts API communication with Chrome Browser driver
                                         # for a GET request to open this URL -> Now Chrome Browser driver
                                         #  will open with this URL in Chrome browser

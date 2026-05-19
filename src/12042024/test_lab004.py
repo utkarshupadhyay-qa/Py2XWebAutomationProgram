@@ -6,5 +6,5 @@ import time
 
 def test_open_vwologin():
     driver = webdriver.Chrome() # POST request | Create the Session
-    driver.get("https://app.vwo.com") # GET Request to URL param
+    driver.get("https://app.vwo.com") # GET Request with URL param
     time.sleep(5)   # optimize if there is no command, I will stop the execution.
