@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 
 
 # @pytest.mark.smoke
-def test_vwologin_negative_tc():
+def test_katalon_demo_cura():
     driver = webdriver.Chrome()
     driver.get("https://katalon-demo-cura.herokuapp.com/")
 
@@ -35,7 +35,7 @@ def test_vwologin_negative_tc():
 
 
     # Note - Rule 1 - if 2 elements are present with same name - it will take First one.
-    # Rule 2- If there is no link text it will not be able to fine the element.
+    # Rule 2- If there is no link text it will not be able to find the element.
 
 
     # make_appointment_btn = driver.find_element(By.LINK_TEXT,"Make Appointment")
