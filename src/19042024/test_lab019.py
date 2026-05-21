@@ -27,12 +27,12 @@ def test_vwologin():
 
     #  //input[@id='login-username']
     #  //input[@name="username"]
-    #  //input[@class="text-input W(800%)"] - Not Recommended.
-    #  //input[@type="email"] - Not Recommended.
-    #  //input[@data-qa="hocewoqisi"] - Custom Attribute
+    #  //input[@class='text-input W(800%)'] - Not Recommended.
+    #  //input[@type='email'] - Not Recommended.
+    #  //input[@data-qa='hocewoqisi'] - Custom Attribute  (Custom Selector)
 
-    make_appointment_btn = driver.find_element(By.XPATH, "//input[@name='username']")
-    make_appointment_btn.send_keys("admin")
+    username_element = driver.find_element(By.XPATH, "//input[@name='username']")
+    username_element.send_keys("admin")
 
     allure.attach(driver.get_screenshot_as_png(), name="login-screenshot", attachment_type=AttachmentType.PNG)
 
