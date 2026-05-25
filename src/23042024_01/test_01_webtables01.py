@@ -54,7 +54,7 @@ def test_web_tables():
     # Get the table
     table = driver.find_element(By.XPATH, "//table[@summary='Sample Table']/tbody")  #tbody because we want only body
     row_table = table.find_elements(By.TAG_NAME, "tr")   # "//table[@summary='Sample Table']/tbody/tr"
-    # this is called as Find Element Chaining
+    # this is called as Find Element Chaining - but make sure tr is within the table
 
     for row in row_table:
         cols = row.find_elements(By.TAG_NAME, "td")
@@ -64,14 +64,14 @@ def test_web_tables():
                 print("YES")
 
 
-# Another example:
+# Another example: Orange HRM
 
 # //div[@role='table']/div[2]/div[9]/div[1]/div[4]
     # first part - //div[@role='table']/div[2]/div[
     # 1-9
     # second part - ]/div[1]/div[
     # 1- 9
-    # third part ]
+    # third part - ]
 
 
  #
