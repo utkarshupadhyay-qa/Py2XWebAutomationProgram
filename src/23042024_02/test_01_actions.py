@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 
 def test_01_actions():
     driver = webdriver.Chrome()
-    driver.get("https://awesomeqa.com/selenium/mouse_interaction.html")
+    driver.get("https://awesomeqa.com/practice.html")
     first_name = driver.find_element(By.XPATH, "//input[@name='firstname']")
 
     # Create an Object of Action Chain Class
@@ -24,9 +24,14 @@ def test_01_actions():
     time.sleep(20)
 
     # url = driver.find_element(By.XPATH, "//a[normalize-space()='Click here to Download File']")
-    # actions.context_click(url).perform()
+    # actions.context_click(url).perform() #context click means right click
 
-    driver.get("https://awesomeqa.com/selenium/single_text_input.html")
+    driver.get("https://awesomeqa.com/selenium/single_text_input.html")   # already focused - cursor blinking- so direct sendkeys
     actions.send_keys("Selenium")
+
+    actions.key_down(Keys.SHIFT)\
+    .key_down(Keys.LEFT)\
+    .key_down(Keys.UP)\
+    .key_up(Keys.SHIFT).perform()
 
     time.sleep(20)

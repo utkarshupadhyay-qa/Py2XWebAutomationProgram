@@ -19,10 +19,11 @@ def test_02_actions():
     # Click - Normal and action will performed
     # click and hold - click and hold -> click but we will not release.
 
-    driver.find_element(By.ID, "click").click()   
+    driver.find_element(By.ID, "click").click()   # Click link
 
     # Action Builder -> Mouse - back
     actions_builder = ActionBuilder(driver)
+    # action_builder.pointer_action - we can point our mouse to a particular location and we can click a particular button as well
     actions_builder.pointer_action.pointer_down(MouseButton.BACK)
     actions_builder.pointer_action.pointer_down(MouseButton.BACK)
     actions_builder.perform()
