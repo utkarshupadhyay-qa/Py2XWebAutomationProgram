@@ -35,6 +35,10 @@ def test_vwologin_positive():
     # EC.visibility_of(By.CSS_SELECTOR,".page-heading")
     # EC.presence_of_element_located((By.CSS_SELECTOR, ".page-heading"))
 
+
+    # Below one is not a good practice - because URL loads first , elements loads later
+    # EC.url_contains("dashboard")
+
     heading_element = driver.find_element(By.XPATH, "//h4[@data-qa='cotirufajo']")
     assert heading_element.text == "Set Up Your Account"
     allure.attach(driver.get_screenshot_as_png(), name="login-screenshot", attachment_type=AttachmentType.PNG)

@@ -36,7 +36,7 @@ def test_vwologin_negative():
     # Python - Interpreter - It is super bad practice - time.sleep(5) - Worst type of Wait.
     # Webdriver
 
-    time.sleep(5)  # This is Python Int who is waiting, Python Execution Halt.
+    time.sleep(5)  # This is Python Interpreter who is waiting, Python Execution Halt.
                    # Instead Selenium Waits are better - because Webdriver will get halt not Python Interpreter
 
     error_msg_element = driver.find_element(By.ID, "js-notification-box-msg")
