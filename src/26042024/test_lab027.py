@@ -40,7 +40,7 @@ def test_vwo_login(user_cred):
     username = user_cred["username"]
     password = user_cred["password"]
     print(username, password)
-    vwo_login(username=username, password=password)
+    vwo_login(username=username, password=password)   # No. of times this function will be called depends on rows of Excel (Test Data)
 
 
 def vwo_login(username, password):
