@@ -17,7 +17,7 @@ def test_svgelements():
     time.sleep(5)
     states = driver.find_elements(By.XPATH,
                                   "//*[name()='svg']/*[name()='g'][7]/*[name()='g']/*[name()='g']/*[name()='path']")
-                                   # This XPATH will give you 36 states in India map
+                                   # This XPATH will give you list of  36 states in India map
 
     for state in states:
         print(state.get_attribute("aria-label"))

@@ -8,9 +8,7 @@ from selenium.webdriver.common.by import By
 
 
 @pytest.mark.smoke
-@allure.title("Verify that Login is working in app.vwo.com website")
-@allure.description("TC#1 - Simple Login check on vwo.com Website.")
-def test_vwologin_negative():
+def test_flipkart():
     driver = webdriver.Chrome()
     driver.get("https://flipkart.com")
     driver.maximize_window()

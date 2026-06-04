@@ -61,6 +61,7 @@ def vwo_login(username, password):
     result = driver.current_url
 
     print(result)
+    # Invalid Login
     if result != "https://app.vwo.com/#/dashboard":
         ignore_list = [ElementNotVisibleException, ElementNotSelectableException]
 
@@ -72,6 +73,8 @@ def vwo_login(username, password):
         print(error_msg_element.text)
         assert error_msg_element.text == "Your email, password, IP address or location did not match"
 
+
+    # Valid Login
     else:
         wait = WebDriverWait(driver=driver, timeout=15)
         wait.until(
