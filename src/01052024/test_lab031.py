@@ -8,7 +8,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.actions.mouse_button import MouseButton
 
 
-def test_01_actions():
+def test_02_actions():
     driver = webdriver.Chrome()
     driver.get("https://awesomeqa.com/selenium/mouse_interaction.html")
 
@@ -16,7 +16,7 @@ def test_01_actions():
     # Click and Hold -> Click -> and Hold, we will not release it.
     atag = driver.find_element(By.ID, "click")
     atag.click()
-
+    time.sleep(5)
     # Actions Builders  = mouse go back
 
     actions_builder = ActionBuilder(driver)

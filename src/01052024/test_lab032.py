@@ -10,7 +10,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 
-def test_01_actions():
+def test_03_actions():
     driver = webdriver.Chrome()
     driver.get("https://www.makemytrip.com/")
     # Find the element -> move to the element -> send keys
