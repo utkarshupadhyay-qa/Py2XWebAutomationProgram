@@ -19,9 +19,9 @@ def test_01_alerts():
 
     wait = WebDriverWait(driver,10)
     wait.until(EC.alert_is_present())
-    alert = driver.switch_to.alert
+    alert = driver.switch_to.alert   # We have switched to alert
     alert.send_keys("Utkarsh")
-    alert.accept()
+    alert.accept() # Clicking on OK
     # alert.dismiss() - means cancel
 
     # popups -> 1- model or html popup, 2- if its alert - this how to handle
