@@ -32,3 +32,39 @@ def test_practice():
 
     time.sleep(15)
     driver.quit()
+
+
+
+# In WebAutomationPractice -
+# import time
+#
+# from selenium import webdriver
+# from selenium.webdriver.common.by import By
+#
+# from selenium.webdriver.support.relative_locator import locate_with
+#
+#
+# def test_relative_locators2():
+#     driver = webdriver.Chrome()
+#     driver.get("https://www.aqi.in/real-time-most-polluted-city-ranking")
+#
+#     driver.maximize_window()
+#
+#     time.sleep(10)
+#
+#     search_element = driver.find_element(By.XPATH, "//input[@placeholder='Search']")
+#     search_element.send_keys("India")
+#     time.sleep(10)
+#
+#     list_of_states = driver.find_elements(By.XPATH, "//div[@class='flex flex-col max-sm:gap-[0.5em]']/a/p[2]/span")
+#     print("Name" + " | " + "Rank" + " | " + "AQI")
+#
+#     for state in list_of_states:
+#         rank = driver.find_element(locate_with(By.CLASS_NAME, "rank").to_left_of(state)).text
+#         aqi = driver.find_element(locate_with(By.CLASS_NAME, "aqi").to_right_of(state)).text
+#
+#         print(state.text + " | " + rank + " | " + aqi)
+#
+#     time.sleep(5)
+#
+#     driver.quit()

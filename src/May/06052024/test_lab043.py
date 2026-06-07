@@ -16,7 +16,7 @@ def test_expcetion():
         # After refresh DOM elements are refreshed
         # Webdriver is confused -> Stale Element Exception
         # // Refresh -> Navigate other Page, change in DOM elements (Ajax Calls) - VueJS, AngularJS
-        # webdriver -> stale element exception
+        # webdriver -> Stale Element exception
 
         # driver.switch_to.alert -> NoAlertPresentException
         # To fix Stale element Exception -> After refresh we have to again find the element
